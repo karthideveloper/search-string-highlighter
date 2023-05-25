@@ -1,6 +1,14 @@
 const highlighter=(data,input)=>{
-    const num=data?.toLowerCase().indexOf(input).toLowerCase();
-    const len=input.length;
+    let num,len;
+    if(data.length>0 && input.length>0){
+       num=data?.toLowerCase().indexOf(input).toLowerCase();
+       len=input.length;
+    }
+    else{
+data=''
+input=''
+    }
+    
 return(<div>
     <span>{data.substr(0,num)}</span>
     <span>{input}</span>
